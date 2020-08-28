@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\controller",
+    "\\routers",
+    "\\views",
+    "\\views\\partials"
+  ],
+  "SelectedNode": "\\views\\partials\\navigation.hbs",
+  "PreviewInSolutionExplorer": false
+}
