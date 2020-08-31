@@ -14,7 +14,7 @@ soldCtrl.addSold = async (req, res, next) => {
 
 soldCtrl.updateSold = async (req, res, next) => {
   try {
-    const sold = await Sold.findbyIdAndUpdate(
+    const sold = await Sold.findByIdAndUpdate(
       { _id: req.params.id },
       req.body,
       { new: true}
