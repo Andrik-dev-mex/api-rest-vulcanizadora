@@ -11,10 +11,7 @@ require('./database');
 
 //habilitar body parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-
-//establecer carpeta de archivos estaticos
-app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended : true}));
 
 //habilitar morgan
 app.use(morgan('dev'));
@@ -27,6 +24,10 @@ app.set('port',process.env.PORT || 5000);
 
 //rutas de la aplicacion
 app.use(require('./routers/index'));
+app.use(require('./routers/cort.route'));
+app.use(require('./routers/products.route'));
+app.use(require('./routers/sold.route'));
+app.use(require('./routers/users.route'));
 
 //puerto en el que escuchara la aplicacion
 app.listen(app.get('port'),() => {
